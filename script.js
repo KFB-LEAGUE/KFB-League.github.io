@@ -1,37 +1,35 @@
 const standings = [
-  {team:'KFB Tigers', g:8, w:7, l:1},
-  {team:'Seoul Bears', g:8, w:6, l:2},
-  {team:'Incheon Eagles', g:8, w:4, l:4},
-  {team:'Busan Waves', g:8, w:3, l:5},
-  {team:'Daejeon Hawks', g:8, w:2, l:6},
-  {team:'Gyeonggi Giants', g:8, w:2, l:6}
+  {team:'현대 유니콘스', g:0, w:0, l:0},
+  {team:'삼성 라이온즈', g:0, w:0, l:0},
+  {team:'케이티위즈', g:0, w:0, l:0},
+  {team:'야쿠르트 스왈로즈', g:0, w:0, l:0}
 ];
 
-const games = [
-  {date:'08.22 (토) 18:00', home:'KFB Tigers', away:'Seoul Bears', status:'예정'},
-  {date:'08.23 (일) 14:00', home:'Incheon Eagles', away:'Busan Waves', status:'예정'},
-  {date:'08.23 (일) 18:00', home:'Daejeon Hawks', away:'Gyeonggi Giants', status:'예정'}
-];
+// 경기 일정은 실제 HCBB KFB 리그 일정에 맞춰 추가할 수 있습니다.
+const games = [];
 
 const teams = [
-  {name:'KFB Tigers', city:'서울', short:'KT'},
-  {name:'Seoul Bears', city:'서울', short:'SB'},
-  {name:'Incheon Eagles', city:'인천', short:'IE'},
-  {name:'Busan Waves', city:'부산', short:'BW'},
-  {name:'Daejeon Hawks', city:'대전', short:'DH'},
-  {name:'Gyeonggi Giants', city:'경기', short:'GG'}
+  {name:'현대 유니콘스', city:'HCBB', short:'HU'},
+  {name:'삼성 라이온즈', city:'HCBB', short:'SL'},
+  {name:'케이티위즈', city:'HCBB', short:'KT'},
+  {name:'야쿠르트 스왈로즈', city:'HCBB', short:'YS'}
 ];
 
 function renderStandings(){
   const body=document.querySelector('#standings-body');
   body.innerHTML=standings.map((x,i)=>{
-    const pct=(x.w/x.g).toFixed(3).replace('0.','.')
+    const pct=x.g ? (x.w/x.g).toFixed(3).replace('0','') : '-';
     return `<tr><td class="rank">${i+1}</td><td class="team-name">${x.team}</td><td>${x.g}</td><td>${x.w}</td><td>${x.l}</td><td>${pct}</td></tr>`;
   }).join('');
 }
 
 function renderSchedule(){
-  document.querySelector('#schedule-list').innerHTML=games.map(g=>`<article class="match"><div class="match-date">${g.date}</div><div class="match-teams"><span>${g.away}</span><span class="vs">VS</span><span>${g.home}</span></div><div class="match-status">${g.status}</div></article>`).join('');
+  const list=document.querySelector('#schedule-list');
+  if(!games.length){
+    list.innerHTML='<div class="news-card"><span class="tag">SCHEDULE</span><h3>경기 일정 준비 중</h3><p>HCBB KFB 리그의 실제 경기 일정이 확정되면 이곳에 표시됩니다.</p></div>';
+    return;
+  }
+  list.innerHTML=games.map(g=>`<article class="match"><div class="match-date">${g.date}</div><div class="match-teams"><span>${g.away}</span><span class="vs">VS</span><span>${g.home}</span></div><div class="match-status">${g.status}</div></article>`).join('');
 }
 
 function renderTeams(){
