@@ -5,8 +5,56 @@ const standings = [
   {team:'야쿠르트 스왈로즈', g:0, w:0, l:0}
 ];
 
-// 경기 일정은 실제 HCBB KFB 리그 일정에 맞춰 추가할 수 있습니다.
-const games = [];
+const games = [
+  {round:1, home:'삼성 라이온즈', away:'케이티위즈'},
+  {round:1, home:'야쿠르트 스왈로즈', away:'현대 유니콘스'},
+  {round:2, home:'현대 유니콘스', away:'삼성 라이온즈'},
+  {round:2, home:'케이티위즈', away:'야쿠르트 스왈로즈'},
+  {round:3, home:'케이티위즈', away:'현대 유니콘스'},
+  {round:3, home:'야쿠르트 스왈로즈', away:'삼성 라이온즈'},
+  {round:4, home:'케이티위즈', away:'삼성 라이온즈'},
+  {round:4, home:'현대 유니콘스', away:'야쿠르트 스왈로즈'},
+  {round:5, home:'삼성 라이온즈', away:'현대 유니콘스'},
+  {round:5, home:'야쿠르트 스왈로즈', away:'케이티위즈'},
+  {round:6, home:'현대 유니콘스', away:'케이티위즈'},
+  {round:6, home:'삼성 라이온즈', away:'야쿠르트 스왈로즈'},
+  {round:7, home:'케이티위즈', away:'삼성 라이온즈'},
+  {round:7, home:'현대 유니콘스', away:'야쿠르트 스왈로즈'},
+  {round:8, home:'삼성 라이온즈', away:'현대 유니콘스'},
+  {round:8, home:'야쿠르트 스왈로즈', away:'케이티위즈'},
+  {round:9, home:'현대 유니콘스', away:'케이티위즈'},
+  {round:9, home:'삼성 라이온즈', away:'야쿠르트 스왈로즈'},
+  {round:10, home:'삼성 라이온즈', away:'케이티위즈'},
+  {round:10, home:'야쿠르트 스왈로즈', away:'현대 유니콘스'},
+  {round:11, home:'현대 유니콘스', away:'삼성 라이온즈'},
+  {round:11, home:'케이티위즈', away:'야쿠르트 스왈로즈'},
+  {round:12, home:'케이티위즈', away:'현대 유니콘스'},
+  {round:12, home:'야쿠르트 스왈로즈', away:'삼성 라이온즈'},
+  {round:13, home:'케이티위즈', away:'삼성 라이온즈'},
+  {round:13, home:'현대 유니콘스', away:'야쿠르트 스왈로즈'},
+  {round:14, home:'삼성 라이온즈', away:'현대 유니콘스'},
+  {round:14, home:'야쿠르트 스왈로즈', away:'케이티위즈'},
+  {round:15, home:'현대 유니콘스', away:'케이티위즈'},
+  {round:15, home:'삼성 라이온즈', away:'야쿠르트 스왈로즈'},
+  {round:16, home:'삼성 라이온즈', away:'케이티위즈'},
+  {round:16, home:'야쿠르트 스왈로즈', away:'현대 유니콘스'},
+  {round:17, home:'현대 유니콘스', away:'삼성 라이온즈'},
+  {round:17, home:'케이티위즈', away:'야쿠르트 스왈로즈'},
+  {round:18, home:'케이티위즈', away:'현대 유니콘스'},
+  {round:18, home:'야쿠르트 스왈로즈', away:'삼성 라이온즈'},
+  {round:19, home:'삼성 라이온즈', away:'케이티위즈'},
+  {round:19, home:'야쿠르트 스왈로즈', away:'현대 유니콘스'},
+  {round:20, home:'현대 유니콘스', away:'삼성 라이온즈'},
+  {round:20, home:'케이티위즈', away:'야쿠르트 스왈로즈'},
+  {round:21, home:'케이티위즈', away:'현대 유니콘스'},
+  {round:21, home:'야쿠르트 스왈로즈', away:'삼성 라이온즈'},
+  {round:22, home:'케이티위즈', away:'삼성 라이온즈'},
+  {round:22, home:'현대 유니콘스', away:'야쿠르트 스왈로즈'},
+  {round:23, home:'삼성 라이온즈', away:'현대 유니콘스'},
+  {round:23, home:'야쿠르트 스왈로즈', away:'케이티위즈'},
+  {round:24, home:'현대 유니콘스', away:'케이티위즈'},
+  {round:24, home:'삼성 라이온즈', away:'야쿠르트 스왈로즈'}
+];
 
 const teams = [
   {name:'현대 유니콘스', city:'HCBB', short:'HU'},
@@ -25,11 +73,11 @@ function renderStandings(){
 
 function renderSchedule(){
   const list=document.querySelector('#schedule-list');
-  if(!games.length){
-    list.innerHTML='<div class="news-card"><span class="tag">SCHEDULE</span><h3>경기 일정 준비 중</h3><p>HCBB KFB 리그의 실제 경기 일정이 확정되면 이곳에 표시됩니다.</p></div>';
-    return;
-  }
-  list.innerHTML=games.map(g=>`<article class="match"><div class="match-date">${g.date}</div><div class="match-teams"><span>${g.away}</span><span class="vs">VS</span><span>${g.home}</span></div><div class="match-status">${g.status}</div></article>`).join('');
+  const rounds=[...new Set(games.map(g=>g.round))];
+  list.innerHTML=rounds.map(round=>{
+    const roundGames=games.filter(g=>g.round===round);
+    return `<div class="schedule-round"><h3>Round ${round}</h3>${roundGames.map(g=>`<article class="match"><div class="match-teams"><span>${g.away}</span><span class="vs">@</span><span>${g.home}</span></div><div class="match-status">예정</div></article>`).join('')}</div>`;
+  }).join('');
 }
 
 function renderTeams(){
