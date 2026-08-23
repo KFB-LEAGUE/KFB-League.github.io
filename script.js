@@ -39,41 +39,47 @@ const teams = [
   {name:'Yakult Swallows', city:'HCBB', logo:'yakult'}
 ];
 
+const rosters = {
+  'Yakult Swallows': {
+    staff:[['PM','GoldenChroma','19+'],['Pre-sign','blaxkstra_a',''],['Pre-sign','Jeongliarz','19+'],['Pre-sign','ShiroaDoll',''],['Pre-sign','mico24524','']],
+    players:[['1','xck018','19+'],['2','VorZaves','13~18'],['3','owldoskq','19+'],['4','kosame55','7~12'],['5','1Lov3_HW','7~12'],['6','woozlordd','13~18'],['7','1Lov3_Doy0un9','7~12'],['8','ANYWAY789','13~18'],['9','hamzziii','19+'],['10','ggkkbt21','7~12'],['11','Akon_Kon','13~18'],['12','1Lov3_Darin',''],['13','DANA_X1126','13~18'],['14','ShaltNK',''],['15','dddfdsfc',''],['16','Cola_1034657',''],['17','willie06080',''],['18','youdam2001',''],['19','0X_Perfect',''],['20','ghffhthhf',''],['21','qwweush',''],['22','tsnsjjssjjd',''],['23','gorsky7',''],['24','',''],['25','',''],['26','',''],['27','',''],['28','',''],['29','',''],['30','','']]},
+  'KT wiz': {
+    staff:[['PM','L_mipr','19+'],['Pre-sign','Jeongliarz','19+']],
+    players:[['1','BaIemoon','13~18'],['2','Rozu_1x',''],['3','Gre4n_Love','19+'],['4','CUTI_STREET','19+'],['5','jongpyokurai','19+'],['6','terry0185','7~12'],['7','rayray24257978','7~12'],['8','kyota_kana','7~12'],['9','',''],['10','ncd1nos','13~18'],['11','KOREA_goodgubber','19+'],['12','JerryEEENTNL','7~12'],['13','Sam0705_Sam0705',''],['14','YutaNalDo',''],['15','heerak2',''],['16','sy_adi',''],['17','ddnwwagefd9991',''],['18','yu_x0412',''],['19','sa1vationtrinity',''],['20','kiabojiz',''],['21','imgodkaito',''],['22','H1n_Lx5h',''],['23','Insanetricx',''],['24','EIL1sback',''],['25','',''],['26','',''],['27','',''],['28','',''],['29','',''],['30','','']]},
+  'Hyundai Unicorns': {
+    staff:[['PM','uwiqojaiwkibzi',''],['Pre-sign','ShiroaDoll',''],['Pre-sign','mico24524','']],
+    players:[['1','ho_0xz','13~18'],['2','wakashizz','13~18'],['3','nicemanman_1','19+'],['4','xxsks_ekw','19+'],['5','mandoo_19','7~12'],['6','klk122380','19+'],['7','X_csm','13~18'],['8','ksmzsm123','13~18'],['9','Mylovesk62','19+'],['10','apexghte','19+'],['11','RxitoVII','19+'],['12','Q_LDL','7~12'],['13','hwgahw76',''],['14','graa_nice',''],['15','Yoongichan0902',''],['16','djhxjffj0',''],['17','STINSONA',''],['18','npm_apple',''],['19','KRsungjae',''],['20','JS13416',''],['21','KimDoYoung_Good',''],['22','Sam0705_Sam0705',''],['23','kingkueen0s',''],['24','OREO_5744',''],['25','1ee_youngchan',''],['26','needam0721',''],['27','splint111',''],['28','1Lov3_donghee',''],['29','',''],['30','','']]},
+  'Samsung Lions': {
+    staff:[['PM','pistol0172',''],['Pre-sign','blaxkstra_a',''],['Pre-sign','Jeongliarz','19+']],
+    players:[['1','Ak1Kurai','13~18'],['2','NOOB_dghm','13~18'],['3','imnotswomi3','13~18'],['4','cool327000','7~12'],['5','kgimpepepspepe','19+'],['6','AdenElec','7~12'],['7','FINX_Z7','7~12'],['8','TheYoungKing_N05','13~18'],['9','GAEQ_74HRUE','7~12'],['10','koreahom123467','19+'],['11','sdy131221','19+'],['12','dex1va1ly','1~6'],['13','crvhjc',''],['14','EZEZEZoqo',''],['15','Kevin707952',''],['16','ezgame0303',''],['17','demon_091033',''],['18','Acthdfgvj',''],['19','12twelve25',''],['20','chosankru39',''],['21','WgoodS1un_n1cegoodz',''],['22','s9sdsei',''],['23','kaname030844',''],['24','aofo5934',''],['25','tttttttrrrtttttttt',''],['26','qqedcjdxcg',''],['27','woojin_0503',''],['28','10wjwdgha',''],['29','dgshjgdj',''],['30','SHJBMV','']]}
+};
+
 function renderStandings(){
   const body=document.querySelector('#standings-body');
-  body.innerHTML=standings.map((x,i)=>{
-    const pct=x.g ? (x.w/x.g).toFixed(3).replace('0','') : '-';
-    return `<tr><td class="rank">${i+1}</td><td class="team-name">${x.team}</td><td>${x.g}</td><td>${x.w}</td><td>${x.l}</td><td>${pct}</td></tr>`;
-  }).join('');
+  body.innerHTML=standings.map((x,i)=>{const pct=x.g?(x.w/x.g).toFixed(3).replace('0',''):'-';return `<tr><td class="rank">${i+1}</td><td class="team-name">${x.team}</td><td>${x.g}</td><td>${x.w}</td><td>${x.l}</td><td>${pct}</td></tr>`;}).join('');
 }
 
 function renderSchedule(){
   const list=document.querySelector('#schedule-list');
   const rounds=[...new Set(games.map(g=>g.round))];
-  list.innerHTML=rounds.map(round=>{
-    const roundGames=games.filter(g=>g.round===round);
-    return `<div class="schedule-round"><h3>Round ${round}</h3>${roundGames.map(g=>`<article class="match"><div class="match-teams"><span>${g.away}</span><span class="vs">@</span><span>${g.home}</span></div><div class="match-status">예정</div></article>`).join('')}</div>`;
-  }).join('');
+  list.innerHTML=rounds.map(round=>{const roundGames=games.filter(g=>g.round===round);return `<div class="schedule-round"><h3>Round ${round}</h3>${roundGames.map(g=>`<article class="match"><div class="match-teams"><span>${g.away}</span><span class="vs">@</span><span>${g.home}</span></div><div class="match-status">Scheduled</div></article>`).join('')}</div>`;}).join('');
 }
 
 function renderTeams(){
-  document.querySelector('#teams-grid').innerHTML=teams.map(t=>{
-    const logo = t.logo === 'yakult'
-      ? `<img class="team-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo%20Yakult%20Swallows%20insignia.svg" alt="${t.name} logo">`
-      : `<div class="team-logo team-logo-${t.logo}" aria-label="${t.name} logo"></div>`;
-    return `<article class="team-card">${logo}<h3>${t.name}</h3><p>${t.city}</p></article>`;
-  }).join('');
+  document.querySelector('#teams-grid').innerHTML=teams.map(t=>{const logo=t.logo==='yakult'?`<img class="team-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo%20Yakult%20Swallows%20insignia.svg" alt="${t.name} logo">`:`<div class="team-logo team-logo-${t.logo}" aria-label="${t.name} logo"></div>`;return `<article class="team-card">${logo}<h3>${t.name}</h3><p>${t.city}</p></article>`;}).join('');
+}
+
+function renderRosters(){
+  const root=document.querySelector('#rosters-grid');
+  root.innerHTML=Object.entries(rosters).map(([team,data])=>`<article class="roster-card"><div class="roster-card-head"><div><p class="eyebrow">ROSTER</p><h3>${team}</h3></div><span>30 slots</span></div><div class="roster-staff">${data.staff.map(s=>`<div class="roster-row staff-row"><span>${s[0]}</span><strong>${s[1]}</strong><em>${s[2]}</em></div>`).join('')}</div><div class="roster-table-wrap"><table class="roster-table"><thead><tr><th>#</th><th>Player</th><th>Age Group</th></tr></thead><tbody>${data.players.map(p=>`<tr><td>${p[0]||'—'}</td><td>${p[1]||'—'}</td><td>${p[2]||'—'}</td></tr>`).join('')}</tbody></table></div></article>`).join('');
 }
 
 const toggle=document.querySelector('.menu-toggle');
 const nav=document.querySelector('.nav');
-toggle.addEventListener('click',()=>{
-  const open=nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded',open);
-});
-
+toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open);});
 document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 document.querySelector('#year').textContent=new Date().getFullYear();
 renderStandings();
 renderSchedule();
 renderTeams();
+renderRosters();
