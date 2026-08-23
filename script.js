@@ -57,7 +57,12 @@ function renderSchedule(){
 }
 
 function renderTeams(){
-  document.querySelector('#teams-grid').innerHTML=teams.map(t=>`<article class="team-card"><div class="team-logo team-logo-${t.logo}" aria-label="${t.name} 로고"></div><h3>${t.name}</h3><p>${t.city}</p></article>`).join('');
+  document.querySelector('#teams-grid').innerHTML=teams.map(t=>{
+    const logo = t.logo === 'yakult'
+      ? `<img class="team-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo%20Yakult%20Swallows%20insignia.svg" alt="${t.name} 로고">`
+      : `<div class="team-logo team-logo-${t.logo}" aria-label="${t.name} 로고"></div>`;
+    return `<article class="team-card">${logo}<h3>${t.name}</h3><p>${t.city}</p></article>`;
+  }).join('');
 }
 
 const toggle=document.querySelector('.menu-toggle');
