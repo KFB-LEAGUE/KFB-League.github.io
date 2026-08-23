@@ -41,16 +41,16 @@ const teams = [
 
 const rosters = {
   'Yakult Swallows': {
-    staff:[['PM','GoldenChroma','19+'],['Pre-sign','blaxkstra_a',''],['Pre-sign','Jeongliarz','19+'],['Pre-sign','ShiroaDoll',''],['Pre-sign','mico24524','']],
+    staff:[['Pre-sign','blaxkstra_a',''],['AM','1Lov3_Darin',''],['AM','DANA_X1126',''],['AM','blaxkstra_a','']],
     players:[['1','xck018','19+'],['2','VorZaves','13~18'],['3','owldoskq','19+'],['4','kosame55','7~12'],['5','1Lov3_HW','7~12'],['6','woozlordd','13~18'],['7','1Lov3_Doy0un9','7~12'],['8','ANYWAY789','13~18'],['9','hamzziii','19+'],['10','ggkkbt21','7~12'],['11','Akon_Kon','13~18'],['12','1Lov3_Darin',''],['13','DANA_X1126','13~18'],['14','ShaltNK',''],['15','dddfdsfc',''],['16','Cola_1034657',''],['17','willie06080',''],['18','youdam2001',''],['19','0X_Perfect',''],['20','ghffhthhf',''],['21','qwweush',''],['22','tsnsjjssjjd',''],['23','gorsky7',''],['24','',''],['25','',''],['26','',''],['27','',''],['28','',''],['29','',''],['30','','']]},
   'KT wiz': {
-    staff:[['PM','L_mipr','19+'],['Pre-sign','Jeongliarz','19+']],
+    staff:[['Pre-sign','Jeongliarz',''],['AM','Jeongliarz',''],['AM','BaIemoon',''],['AM','YutaNalDo','']],
     players:[['1','BaIemoon','13~18'],['2','Rozu_1x',''],['3','Gre4n_Love','19+'],['4','CUTI_STREET','19+'],['5','jongpyokurai','19+'],['6','terry0185','7~12'],['7','rayray24257978','7~12'],['8','kyota_kana','7~12'],['9','',''],['10','ncd1nos','13~18'],['11','KOREA_goodgubber','19+'],['12','JerryEEENTNL','7~12'],['13','Sam0705_Sam0705',''],['14','YutaNalDo',''],['15','heerak2',''],['16','sy_adi',''],['17','ddnwwagefd9991',''],['18','yu_x0412',''],['19','sa1vationtrinity',''],['20','kiabojiz',''],['21','imgodkaito',''],['22','H1n_Lx5h',''],['23','Insanetricx',''],['24','EIL1sback',''],['25','',''],['26','',''],['27','',''],['28','',''],['29','',''],['30','','']]},
   'Hyundai Unicorns': {
-    staff:[['PM','uwiqojaiwkibzi',''],['Pre-sign','ShiroaDoll',''],['Pre-sign','mico24524','']],
+    staff:[['Pre-sign','ShiroaDoll',''],['AM','ShiroaDoll',''],['AM','nicemanman_1',''],['AM','wakashizz','']],
     players:[['1','ho_0xz','13~18'],['2','wakashizz','13~18'],['3','nicemanman_1','19+'],['4','xxsks_ekw','19+'],['5','mandoo_19','7~12'],['6','klk122380','19+'],['7','X_csm','13~18'],['8','ksmzsm123','13~18'],['9','Mylovesk62','19+'],['10','apexghte','19+'],['11','RxitoVII','19+'],['12','Q_LDL','7~12'],['13','hwgahw76',''],['14','graa_nice',''],['15','Yoongichan0902',''],['16','djhxjffj0',''],['17','STINSONA',''],['18','npm_apple',''],['19','KRsungjae',''],['20','JS13416',''],['21','KimDoYoung_Good',''],['22','Sam0705_Sam0705',''],['23','kingkueen0s',''],['24','OREO_5744',''],['25','1ee_youngchan',''],['26','needam0721',''],['27','splint111',''],['28','1Lov3_donghee',''],['29','',''],['30','','']]},
   'Samsung Lions': {
-    staff:[['PM','pistol0172',''],['Pre-sign','blaxkstra_a',''],['Pre-sign','Jeongliarz','19+']],
+    staff:[['Pre-sign','mico24524',''],['AM','mico24524',''],['AM','Ak1Kurai',''],['AM','NOOB_dghm','']],
     players:[['1','Ak1Kurai','13~18'],['2','NOOB_dghm','13~18'],['3','imnotswomi3','13~18'],['4','cool327000','7~12'],['5','kgimpepepspepe','19+'],['6','AdenElec','7~12'],['7','FINX_Z7','7~12'],['8','TheYoungKing_N05','13~18'],['9','GAEQ_74HRUE','7~12'],['10','koreahom123467','19+'],['11','sdy131221','19+'],['12','dex1va1ly','1~6'],['13','crvhjc',''],['14','EZEZEZoqo',''],['15','Kevin707952',''],['16','ezgame0303',''],['17','demon_091033',''],['18','Acthdfgvj',''],['19','12twelve25',''],['20','chosankru39',''],['21','WgoodS1un_n1cegoodz',''],['22','s9sdsei',''],['23','kaname030844',''],['24','aofo5934',''],['25','tttttttrrrtttttttt',''],['26','qqedcjdxcg',''],['27','woojin_0503',''],['28','10wjwdgha',''],['29','dgshjgdj',''],['30','SHJBMV','']]}
 };
 
