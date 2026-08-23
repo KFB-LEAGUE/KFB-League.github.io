@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="KFB 야구리그 공식 홈페이지">
+  <meta name="description" content="KFB Baseball League official website">
   <title>KFB Baseball League</title>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="logo" href="#home" aria-label="KFB 홈">KFB<span>BASEBALL</span></a>
-      <button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button>
-      <nav class="nav" aria-label="주 메뉴">
-        <a href="#home">홈</a><a href="#news">리그 소식</a><a href="#standings">순위</a><a href="#schedule">경기 일정</a><a href="#teams">팀 소개</a>
+      <a class="logo" href="#home" aria-label="KFB Home">KFB<span>BASEBALL</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#news">League News</a><a href="#standings">Standings</a><a href="#schedule">Schedule</a><a href="#teams">Teams</a>
       </nav>
     </div>
   </header>
   <main id="home">
-    <section class="hero"><div class="container hero-content"><p class="eyebrow">KOREA FRIENDLY BASEBALL LEAGUE</p><h1>야구의 열정을<br><span>하나의 리그</span>로.</h1><p class="hero-copy">KFB 야구리그의 최신 소식과 경기 일정, 팀 순위를 한눈에 확인하세요.</p><div class="hero-actions"><a class="btn btn-primary" href="#schedule">경기 일정 보기</a><a class="btn btn-ghost" href="#standings">리그 순위</a></div></div><div class="hero-ball" aria-hidden="true">⚾</div></section>
-    <section id="news" class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">LATEST</p><h2>리그 소식</h2></div><span class="section-line"></span></div><div class="news-grid"><article class="news-card featured"><span class="tag">KFB NEWS</span><h3>2026 KFB 시즌이 시작됩니다</h3><p>새로운 시즌, 새로운 승부. KFB의 뜨거운 경기를 지금 확인하세요.</p><span class="date">2026.08.17</span></article><article class="news-card"><span class="tag">NOTICE</span><h3>리그 경기 일정 안내</h3><p>이번 주 주요 경기 일정을 확인하고 응원할 팀을 선택해 보세요.</p><span class="date">2026.08.16</span></article><article class="news-card"><span class="tag">LEAGUE</span><h3>팀 등록 및 선수 명단 업데이트</h3><p>각 팀의 최신 정보를 홈페이지에서 확인할 수 있습니다.</p><span class="date">2026.08.15</span></article></div></div></section>
-    <section id="standings" class="section section-dark"><div class="container"><div class="section-heading light"><div><p class="eyebrow">STANDINGS</p><h2>리그 순위</h2></div><span class="season-badge">2026 SEASON</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>팀</th><th>경기</th><th>승</th><th>패</th><th>승률</th></tr></thead><tbody id="standings-body"></tbody></table></div></div></section>
-    <section id="schedule" class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">SCHEDULE</p><h2>경기 일정</h2></div></div><div id="schedule-list" class="schedule-list"></div></div></section>
-    <section id="teams" class="section teams-section"><div class="container"><div class="section-heading"><div><p class="eyebrow">TEAMS</p><h2>KFB 팀</h2></div></div><div id="teams-grid" class="teams-grid"></div></div></section>
+    <section class="hero"><div class="container hero-content"><p class="eyebrow">KOREA FRIENDLY BASEBALL LEAGUE</p><h1>Baseball Passion<br><span>One League.</span></h1><p class="hero-copy">Check the latest KFB Baseball League news, schedule, standings, and teams.</p><div class="hero-actions"><a class="btn btn-primary" href="#schedule">View Schedule</a><a class="btn btn-ghost" href="#standings">Standings</a></div></div><div class="hero-ball" aria-hidden="true">⚾</div></section>
+    <section id="news" class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">LATEST</p><h2>League News</h2></div><span class="section-line"></span></div><div class="news-grid"><article class="news-card featured"><span class="tag">KFB NEWS</span><h3>2026 KFB Season Begins</h3><p>A new season and new battles. Follow the latest KFB action.</p><span class="date">2026.08.17</span></article><article class="news-card"><span class="tag">NOTICE</span><h3>League Schedule</h3><p>Check the upcoming games and choose your team to support.</p><span class="date">2026.08.16</span></article><article class="news-card"><span class="tag">LEAGUE</span><h3>Team & Roster Updates</h3><p>Latest team information is available on the official website.</p><span class="date">2026.08.15</span></article></div></div></section>
+    <section id="standings" class="section section-dark"><div class="container"><div class="section-heading light"><div><p class="eyebrow">STANDINGS</p><h2>League Standings</h2></div><span class="season-badge">2026 SEASON</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>GP</th><th>W</th><th>L</th><th>PCT</th></tr></thead><tbody id="standings-body"></tbody></table></div></div></section>
+    <section id="schedule" class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">SCHEDULE</p><h2>Game Schedule</h2></div></div><div id="schedule-list" class="schedule-list"></div></div></section>
+    <section id="teams" class="section teams-section"><div class="container"><div class="section-heading"><div><p class="eyebrow">TEAMS</p><h2>KFB Teams</h2></div></div><div id="teams-grid" class="teams-grid"></div></div></section>
   </main>
-  <footer class="footer"><div class="container footer-wrap"><div><strong>KFB BASEBALL</strong><p>대한민국 야구리그의 새로운 기준</p></div><p>© <span id="year"></span> KFB Baseball League. All rights reserved.</p></div></footer>
-  <script src="script.js?v=3"></script>
+  <footer class="footer"><div class="container footer-wrap"><div><strong>KFB BASEBALL</strong><p>The new standard of baseball leagues</p></div><p>© <span id="year"></span> KFB Baseball League. All rights reserved.</p></div></footer>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
