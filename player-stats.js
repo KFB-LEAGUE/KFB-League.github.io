@@ -4,6 +4,7 @@
  * AVG/OBP/SLG are calculated automatically by the website.
  */
 const playerStats = {
+  "mico24524": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0 },
   "xck018": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0 },
   "VorZaves": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0 },
   "owldoskq": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0 },
