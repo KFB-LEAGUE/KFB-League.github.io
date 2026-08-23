@@ -43,7 +43,7 @@ const playerStats = {
   "rayray24257978": { team:"KT wiz", gp:2, pa:2, ab:2, h:1, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "Rozu_1x": { team:"KT wiz", gp:1, pa:1, ab:1, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "RxitoVII": { team:"Hyundai Unicorns", gp:4, pa:10, ab:10, h:2, doubles:0, triples:0, hr:0, rbi:1, bb:0, so:5, stolen_bases:0, wins:0, era:0 },
-  "sdy131221": { team:"", gp:5, pa:15, ab:15, h:2, doubles:1, triples:0, hr:0, rbi:0, bb:0, so:5, stolen_bases:0, wins:0, era:0 },
+  "sdy131221": { team:"Samsung Lions", gp:5, pa:15, ab:15, h:2, doubles:1, triples:0, hr:0, rbi:0, bb:0, so:5, stolen_bases:0, wins:0, era:0 },
   "terry0185": { team:"KT wiz", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "TheYoungKing_N05": { team:"Samsung Lions", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "VorZaves": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:1, stolen_bases:0, wins:0, era:0 },
