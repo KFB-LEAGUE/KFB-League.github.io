@@ -1,42 +1,42 @@
 const standings = [
-  {team:'현대 유니콘스', g:0, w:0, l:0},
-  {team:'삼성 라이온즈', g:0, w:0, l:0},
-  {team:'케이티위즈', g:0, w:0, l:0},
-  {team:'야쿠르트 스왈로즈', g:0, w:0, l:0}
+  {team:'Hyundai Unicorns', g:0, w:0, l:0},
+  {team:'Samsung Lions', g:0, w:0, l:0},
+  {team:'KT wiz', g:0, w:0, l:0},
+  {team:'Yakult Swallows', g:0, w:0, l:0}
 ];
 
 const games = [
-  {round:1, home:'삼성 라이온즈', away:'케이티위즈'}, {round:1, home:'야쿠르트 스왈로즈', away:'현대 유니콘스'},
-  {round:2, home:'현대 유니콘스', away:'삼성 라이온즈'}, {round:2, home:'케이티위즈', away:'야쿠르트 스왈로즈'},
-  {round:3, home:'케이티위즈', away:'현대 유니콘스'}, {round:3, home:'야쿠르트 스왈로즈', away:'삼성 라이온즈'},
-  {round:4, home:'케이티위즈', away:'삼성 라이온즈'}, {round:4, home:'현대 유니콘스', away:'야쿠르트 스왈로즈'},
-  {round:5, home:'삼성 라이온즈', away:'현대 유니콘스'}, {round:5, home:'야쿠르트 스왈로즈', away:'케이티위즈'},
-  {round:6, home:'현대 유니콘스', away:'케이티위즈'}, {round:6, home:'삼성 라이온즈', away:'야쿠르트 스왈로즈'},
-  {round:7, home:'케이티위즈', away:'삼성 라이온즈'}, {round:7, home:'현대 유니콘스', away:'야쿠르트 스왈로즈'},
-  {round:8, home:'삼성 라이온즈', away:'현대 유니콘스'}, {round:8, home:'야쿠르트 스왈로즈', away:'케이티위즈'},
-  {round:9, home:'현대 유니콘스', away:'케이티위즈'}, {round:9, home:'삼성 라이온즈', away:'야쿠르트 스왈로즈'},
-  {round:10, home:'삼성 라이온즈', away:'케이티위즈'}, {round:10, home:'야쿠르트 스왈로즈', away:'현대 유니콘스'},
-  {round:11, home:'현대 유니콘스', away:'삼성 라이온즈'}, {round:11, home:'케이티위즈', away:'야쿠르트 스왈로즈'},
-  {round:12, home:'케이티위즈', away:'현대 유니콘스'}, {round:12, home:'야쿠르트 스왈로즈', away:'삼성 라이온즈'},
-  {round:13, home:'케이티위즈', away:'삼성 라이온즈'}, {round:13, home:'현대 유니콘스', away:'야쿠르트 스왈로즈'},
-  {round:14, home:'삼성 라이온즈', away:'현대 유니콘스'}, {round:14, home:'야쿠르트 스왈로즈', away:'케이티위즈'},
-  {round:15, home:'현대 유니콘스', away:'케이티위즈'}, {round:15, home:'삼성 라이온즈', away:'야쿠르트 스왈로즈'},
-  {round:16, home:'삼성 라이온즈', away:'케이티위즈'}, {round:16, home:'야쿠르트 스왈로즈', away:'현대 유니콘스'},
-  {round:17, home:'현대 유니콘스', away:'삼성 라이온즈'}, {round:17, home:'케이티위즈', away:'야쿠르트 스왈로즈'},
-  {round:18, home:'케이티위즈', away:'현대 유니콘스'}, {round:18, home:'야쿠르트 스왈로즈', away:'삼성 라이온즈'},
-  {round:19, home:'삼성 라이온즈', away:'케이티위즈'}, {round:19, home:'야쿠르트 스왈로즈', away:'현대 유니콘스'},
-  {round:20, home:'현대 유니콘스', away:'삼성 라이온즈'}, {round:20, home:'케이티위즈', away:'야쿠르트 스왈로즈'},
-  {round:21, home:'케이티위즈', away:'현대 유니콘스'}, {round:21, home:'야쿠르트 스왈로즈', away:'삼성 라이온즈'},
-  {round:22, home:'케이티위즈', away:'삼성 라이온즈'}, {round:22, home:'현대 유니콘스', away:'야쿠르트 스왈로즈'},
-  {round:23, home:'삼성 라이온즈', away:'현대 유니콘스'}, {round:23, home:'야쿠르트 스왈로즈', away:'케이티위즈'},
-  {round:24, home:'현대 유니콘스', away:'케이티위즈'}, {round:24, home:'삼성 라이온즈', away:'야쿠르트 스왈로즈'}
+  {round:1, home:'Samsung Lions', away:'KT wiz'}, {round:1, home:'Yakult Swallows', away:'Hyundai Unicorns'},
+  {round:2, home:'Hyundai Unicorns', away:'Samsung Lions'}, {round:2, home:'KT wiz', away:'Yakult Swallows'},
+  {round:3, home:'KT wiz', away:'Hyundai Unicorns'}, {round:3, home:'Yakult Swallows', away:'Samsung Lions'},
+  {round:4, home:'KT wiz', away:'Samsung Lions'}, {round:4, home:'Hyundai Unicorns', away:'Yakult Swallows'},
+  {round:5, home:'Samsung Lions', away:'Hyundai Unicorns'}, {round:5, home:'Yakult Swallows', away:'KT wiz'},
+  {round:6, home:'Hyundai Unicorns', away:'KT wiz'}, {round:6, home:'Samsung Lions', away:'Yakult Swallows'},
+  {round:7, home:'KT wiz', away:'Samsung Lions'}, {round:7, home:'Hyundai Unicorns', away:'Yakult Swallows'},
+  {round:8, home:'Samsung Lions', away:'Hyundai Unicorns'}, {round:8, home:'Yakult Swallows', away:'KT wiz'},
+  {round:9, home:'Hyundai Unicorns', away:'KT wiz'}, {round:9, home:'Samsung Lions', away:'Yakult Swallows'},
+  {round:10, home:'Samsung Lions', away:'KT wiz'}, {round:10, home:'Yakult Swallows', away:'Hyundai Unicorns'},
+  {round:11, home:'Hyundai Unicorns', away:'Samsung Lions'}, {round:11, home:'KT wiz', away:'Yakult Swallows'},
+  {round:12, home:'KT wiz', away:'Hyundai Unicorns'}, {round:12, home:'Yakult Swallows', away:'Samsung Lions'},
+  {round:13, home:'KT wiz', away:'Samsung Lions'}, {round:13, home:'Hyundai Unicorns', away:'Yakult Swallows'},
+  {round:14, home:'Samsung Lions', away:'Hyundai Unicorns'}, {round:14, home:'Yakult Swallows', away:'KT wiz'},
+  {round:15, home:'Hyundai Unicorns', away:'KT wiz'}, {round:15, home:'Samsung Lions', away:'Yakult Swallows'},
+  {round:16, home:'Samsung Lions', away:'KT wiz'}, {round:16, home:'Yakult Swallows', away:'Hyundai Unicorns'},
+  {round:17, home:'Hyundai Unicorns', away:'Samsung Lions'}, {round:17, home:'KT wiz', away:'Yakult Swallows'},
+  {round:18, home:'KT wiz', away:'Hyundai Unicorns'}, {round:18, home:'Yakult Swallows', away:'Samsung Lions'},
+  {round:19, home:'Samsung Lions', away:'KT wiz'}, {round:19, home:'Yakult Swallows', away:'Hyundai Unicorns'},
+  {round:20, home:'Hyundai Unicorns', away:'Samsung Lions'}, {round:20, home:'KT wiz', away:'Yakult Swallows'},
+  {round:21, home:'KT wiz', away:'Hyundai Unicorns'}, {round:21, home:'Yakult Swallows', away:'Samsung Lions'},
+  {round:22, home:'KT wiz', away:'Samsung Lions'}, {round:22, home:'Hyundai Unicorns', away:'Yakult Swallows'},
+  {round:23, home:'Samsung Lions', away:'Hyundai Unicorns'}, {round:23, home:'Yakult Swallows', away:'KT wiz'},
+  {round:24, home:'Hyundai Unicorns', away:'KT wiz'}, {round:24, home:'Samsung Lions', away:'Yakult Swallows'}
 ];
 
 const teams = [
-  {name:'현대 유니콘스', city:'HCBB', logo:'hyundai'},
-  {name:'케이티위즈', city:'HCBB', logo:'kt'},
-  {name:'삼성 라이온즈', city:'HCBB', logo:'samsung'},
-  {name:'야쿠르트 스왈로즈', city:'HCBB', logo:'yakult'}
+  {name:'Hyundai Unicorns', city:'HCBB', logo:'hyundai'},
+  {name:'KT wiz', city:'HCBB', logo:'kt'},
+  {name:'Samsung Lions', city:'HCBB', logo:'samsung'},
+  {name:'Yakult Swallows', city:'HCBB', logo:'yakult'}
 ];
 
 function renderStandings(){
@@ -59,8 +59,8 @@ function renderSchedule(){
 function renderTeams(){
   document.querySelector('#teams-grid').innerHTML=teams.map(t=>{
     const logo = t.logo === 'yakult'
-      ? `<img class="team-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo%20Yakult%20Swallows%20insignia.svg" alt="${t.name} 로고">`
-      : `<div class="team-logo team-logo-${t.logo}" aria-label="${t.name} 로고"></div>`;
+      ? `<img class="team-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo%20Yakult%20Swallows%20insignia.svg" alt="${t.name} logo">`
+      : `<div class="team-logo team-logo-${t.logo}" aria-label="${t.name} logo"></div>`;
     return `<article class="team-card">${logo}<h3>${t.name}</h3><p>${t.city}</p></article>`;
   }).join('');
 }
