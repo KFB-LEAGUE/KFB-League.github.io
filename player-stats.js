@@ -33,7 +33,7 @@ const playerStats = {
   "ksmzsm123": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "kyota_kana": { team:"KT wiz", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "mandoo_19": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
-  "mico24524": { team:"Samsung Lions", gp:4, pa:0, ab:0.214, h:3, doubles:2, triples:0, hr:0, rbi:1, bb:0, so:6, stolen_bases:0, wins:0, era:0 },
+  "mico24524": { team:"Samsung Lions", gp:4, pa:14, ab:14, h:3, doubles:2, triples:0, hr:0, rbi:1, bb:0, so:6, stolen_bases:0, wins:0, era:0 },
   "Mylovesk62": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "ncd1nos": { team:"KT wiz", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "nicemanman_1": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
