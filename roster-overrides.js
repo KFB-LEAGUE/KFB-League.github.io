@@ -1,34 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const overrides = {
-    'Samsung Lions': {
-      preSign: ['mico24524'],
-      am: ['mico24524', 'Ak1Kurai', 'NOOB_dghm']
-    },
-    'Hyundai Unicorns': {
-      preSign: ['ShiroaDoll'],
-      am: ['ShiroaDoll', 'nicemanman_1', 'wakashizz']
-    },
-    'KT wiz': {
-      preSign: ['Jeongliarz'],
-      am: ['Jeongliarz', 'BaIemoon', 'YutaNalDo']
-    },
-    'Yakult Swallows': {
-      preSign: ['blaxkstra_a'],
-      am: ['1Lov3_Darin', 'DANA_X1126', 'blaxkstra_a']
-    }
-  };
+// KFB League roster data
+const KFB_ROSTERS = {
+  'Samsung Lions': { preSign: ['mico24524'], am: ['mico24524', 'Ak1Kurai', 'NOOB_dghm'] },
+  'Hyundai Unicorns': { preSign: ['ShiroaDoll'], am: ['ShiroaDoll', 'nicemanman_1', 'wakashizz'] },
+  'KT wiz': { preSign: ['Jeongliarz'], am: ['Jeongliarz', 'BaIemoon', 'YutaNalDo'] },
+  'Yakult Swallows': { preSign: ['blaxkstra_a'], am: ['1Lov3_Darin', 'DANA_X1126', 'blaxkstra_a'] }
+};
 
-  document.querySelectorAll('.roster-card').forEach(card => {
-    const title = card.querySelector('h3')?.textContent.trim();
-    const data = overrides[title];
-    if (!data) return;
+function renderKfbRosters() {
+  const root = document.querySelector('#rosters-grid');
+  if (!root) return;
+  root.innerHTML = Object.entries(KFB_ROSTERS).map(([team, data]) => {
+    const rows = [
+      ...data.preSign.map(name => `<div class="roster-row staff-row"><span>Pre-sign</span><strong>${name}</strong><em></em></div>`),
+      ...data.am.map(name => `<div class="roster-row staff-row"><span>AM</span><strong>${name}</strong><em></em></div>`)
+    ].join('');
+    return `<article class="roster-card"><div class="roster-card-header"><h3>${team}</h3></div><div class="roster-staff">${rows}</div></article>`;
+  }).join('');
+}
 
-    const staff = card.querySelector('.roster-staff');
-    if (!staff) return;
-
-    const rows = [];
-    data.preSign.forEach(name => rows.push(`<div class="roster-row staff-row"><span>Pre-sign</span><strong>${name}</strong><em></em></div>`));
-    data.am.forEach(name => rows.push(`<div class="roster-row staff-row"><span>AM</span><strong>${name}</strong><em></em></div>`));
-    staff.innerHTML = rows.join('');
-  });
-});
+document.addEventListener('DOMContentLoaded', renderKfbRosters);
+if (document.readyState !== 'loading') renderKfbRosters();
