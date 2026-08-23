@@ -4,12 +4,12 @@
  */
 const playerStats = {
   "1Lov3_Darin": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
-  "1Lov3_Doy0un9": { team:"Yakult Swallows", gp:1, pa:0, ab:0.25, h:4, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:3, stolen_bases:0, wins:0, era:0 },
+  "1Lov3_Doy0un9": { team:"Yakult Swallows", gp:1, pa:4, ab:4, h:1, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:3, stolen_bases:0, wins:0, era:0 },
   "1Lov3_HW": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:1, stolen_bases:0, wins:0, era:0 },
   "AdenElec": { team:"Samsung Lions", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "Ak1Kurai": { team:"Samsung Lions", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "Akon_Kon": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
-  "ANYWAY789": { team:"Yakult Swallows", gp:4, pa:0, ab:0.308, h:13, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:4, stolen_bases:0, wins:0, era:0 },
+  "ANYWAY789": { team:"Yakult Swallows", gp:4, pa:4, ab:4, h:13, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:4, stolen_bases:0, wins:0, era:0 },
   "apexghte": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "BaIemoon": { team:"KT wiz", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "cool327000": { team:"Samsung Lions", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
@@ -38,7 +38,7 @@ const playerStats = {
   "ncd1nos": { team:"KT wiz", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "nicemanman_1": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "NOOB_dghm": { team:"Samsung Lions", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
-  "owldoskq": { team:"Yakult Swallows", gp:4, pa:0, ab:0, h:15, doubles:3, triples:0, hr:0, rbi:1, bb:0, so:3, stolen_bases:0, wins:0, era:0 },
+  "owldoskq": { team:"Yakult Swallows", gp:5, pa:19, ab:19, h:10, doubles:3, triples:0, hr:0, rbi:1, bb:0, so:3, stolen_bases:0, wins:0, era:0 },
   "Q_LDL": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "rayray24257978": { team:"KT wiz", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "Rozu_1x": { team:"KT wiz", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
@@ -48,8 +48,8 @@ const playerStats = {
   "TheYoungKing_N05": { team:"Samsung Lions", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "VorZaves": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:1, stolen_bases:0, wins:0, era:0 },
   "wakashizz": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
-  "woozlordd": { team:"Yakult Swallows", gp:2, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:2, stolen_bases:0, wins:0, era:0 },
+  "woozlordd": { team:"Yakult Swallows", gp:2, pa:2, ab:2, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:2, stolen_bases:0, wins:0, era:0 },
   "X_csm": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
-  "xck018": { team:"Yakult Swallows", gp:2, pa:0, ab:0.375, h:3, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
+  "xck018": { team:"Yakult Swallows", gp:2, pa:8, ab:8, h:3, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "xxsks_ekw": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 }
 };
