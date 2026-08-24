@@ -58,7 +58,6 @@ const playerStats = {
   "VorZaves": { team:"Yakult Swallows", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:1, stolen_bases:0, wins:0, era:0 },
   "wakashizz": { team:"Hyundai Unicorns", gp:5, pa:10, ab:10, h:4, doubles:2, triples:0, hr:1, rbi:2, bb:0, so:1, stolen_bases:0, wins:1, era:0 },
   "woozlordd": { team:"Yakult Swallows", gp:2, pa:2, ab:2, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:2, stolen_bases:0, wins:0, era:0 },
-  "X_csm": { team:"Hyundai Unicorns", gp:6, pa:19, ab:19, h:7, doubles:3, triples:0, hr:2, rbi:2, bb:0, so:4, stolen_bases:0, wins:0, era:0 },
   "xck018": { team:"Yakult Swallows", gp:2, pa:8, ab:8, h:3, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "xxsks_ekw": { team:"Hyundai Unicorns", gp:5, pa:15, ab:15, h:2, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:5, stolen_bases:0, wins:1, era:2 }
 };
