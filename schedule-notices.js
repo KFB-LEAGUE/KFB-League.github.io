@@ -4,7 +4,7 @@ const kfbScheduleNotices = [
     "date": "2026-08-24",
     "time": "19:30",
     "title": "round 7",
-    "match": "yakult @ hyundai server 2",
-    "content": ""
+    "match": "samsung @ kt",
+    "content": "server 1"
   }
 ];
