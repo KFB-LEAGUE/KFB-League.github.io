@@ -13,5 +13,12 @@ const kfbScheduleNotices = [
     "title": "태스트",
     "match": "태스트",
     "content": "태스트"
+  },
+  {
+    "date": "2026-08-24",
+    "time": "23:57",
+    "title": "test",
+    "match": "test",
+    "content": ""
   }
 ];
