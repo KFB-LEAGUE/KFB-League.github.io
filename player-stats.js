@@ -1,6 +1,5 @@
 /* KFB League - MANUAL PLAYER STATISTICS
- * Edit through the Admin panel or change the numbers here.
- * AVG is calculated automatically by the website.
+ * Managed through the Admin panel. AVG/OBP/SLG are calculated by the website.
  */
 const playerStats = {
   "1Lov3_Darin": { team:"Yakult Swallows", gp:1, pa:4, ab:4, h:2, doubles:0, triples:0, hr:0, rbi:1, bb:0, so:1, stolen_bases:0, wins:0, era:0 },
