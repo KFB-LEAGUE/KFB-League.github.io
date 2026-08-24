@@ -35,6 +35,7 @@ const playerStats = {
   "koreahom123467": { team:"Samsung Lions", gp:3, pa:6, ab:6, h:1, doubles:1, triples:0, hr:0, rbi:1, bb:0, so:2, stolen_bases:0, wins:0, era:0 },
   "kosame55": { team:"Yakult Swallows", gp:1, pa:1, ab:1, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:1, stolen_bases:0, wins:0, era:0 },
   "ksmzsm123": { team:"Hyundai Unicorns", gp:1, pa:2, ab:2, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
+  "KunH1oaz_x": { team:"Hyundai Unicorns", gp:6, pa:19, ab:19, h:7, doubles:3, triples:0, hr:2, rbi:2, bb:0, so:4, stolen_bases:0, wins:0, era:0 },
   "kyota_kana": { team:"KT wiz", gp:1, pa:1, ab:1, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "L_mipr": { team:"KT wiz", gp:6, pa:27, ab:27, h:4, doubles:0, triples:0, hr:0, rbi:1, bb:0, so:5, stolen_bases:0, wins:3, era:1.286 },
   "mandoo_19": { team:"Hyundai Unicorns", gp:5, pa:7, ab:7, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
