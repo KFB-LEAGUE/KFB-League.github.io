@@ -9,7 +9,7 @@ const playerStats = {
   "AdenElec": { team:"Samsung Lions", gp:1, pa:4, ab:4, h:2, doubles:1, triples:0, hr:0, rbi:1, bb:0, so:1, stolen_bases:0, wins:0, era:0 },
   "Ak1Kurai": { team:"Samsung Lions", gp:3, pa:7, ab:7, h:3, doubles:1, triples:0, hr:0, rbi:1, bb:0, so:1, stolen_bases:0, wins:0, era:2.25 },
   "Akon_Kon": { team:"Yakult Swallows", gp:3, pa:9, ab:9, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:5, stolen_bases:0, wins:0, era:3 },
-  "ANYWAY789": { team:"Yakult Swallows", gp:4, pa:4, ab:4, h:13, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:4, stolen_bases:0, wins:0, era:0 },
+  "ANYWAY789": { team:"Yakult Swallows", gp:4, pa:13, ab:13, h:4, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:4, stolen_bases:0, wins:0, era:0 },
   "apexghte": { team:"Hyundai Unicorns", gp:0, pa:0, ab:0, h:0, doubles:0, triples:0, hr:0, rbi:0, bb:0, so:0, stolen_bases:0, wins:0, era:0 },
   "BaIemoon": { team:"KT wiz", gp:2, pa:7, ab:7, h:3, doubles:1, triples:0, hr:0, rbi:0, bb:0, so:2, stolen_bases:0, wins:0, era:1.8 },
   "blaxstra_a": { team:"Yakult Swallows", gp:5, pa:16, ab:16, h:3, doubles:0, triples:1, hr:0, rbi:1, bb:0, so:6, stolen_bases:0, wins:0, era:3.24 },
