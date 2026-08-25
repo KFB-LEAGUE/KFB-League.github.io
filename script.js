@@ -4,25 +4,9 @@ const standings = [
   {team:'KT wiz', g:0, w:0, l:0},
   {team:'Yakult Swallows', g:0, w:0, l:0}
 ];
-const games = [
-  {round:1,home:'Samsung Lions',away:'KT wiz'},{round:1,home:'Yakult Swallows',away:'Hyundai Unicorns'},{round:2,home:'Hyundai Unicorns',away:'Samsung Lions'},{round:2,home:'KT wiz',away:'Yakult Swallows'},
-  {round:3,home:'KT wiz',away:'Hyundai Unicorns'},{round:3,home:'Yakult Swallows',away:'Samsung Lions'},{round:4,home:'KT wiz',away:'Samsung Lions'},{round:4,home:'Hyundai Unicorns',away:'Yakult Swallows'},
-  {round:5,home:'Samsung Lions',away:'Hyundai Unicorns'},{round:5,home:'Yakult Swallows',away:'KT wiz'},{round:6,home:'Hyundai Unicorns',away:'KT wiz'},{round:6,home:'Samsung Lions',away:'Yakult Swallows'},
-  {round:7,home:'KT wiz',away:'Samsung Lions'},{round:7,home:'Hyundai Unicorns',away:'Yakult Swallows'},{round:8,home:'Samsung Lions',away:'Hyundai Unicorns'},{round:8,home:'Yakult Swallows',away:'KT wiz'},
-  {round:9,home:'Hyundai Unicorns',away:'KT wiz'},{round:9,home:'Samsung Lions',away:'Yakult Swallows'},{round:10,home:'Samsung Lions',away:'KT wiz'},{round:10,home:'Yakult Swallows',away:'Hyundai Unicorns'},
-  {round:11,home:'Hyundai Unicorns',away:'Samsung Lions'},{round:11,home:'KT wiz',away:'Yakult Swallows'},{round:12,home:'KT wiz',away:'Hyundai Unicorns'},{round:12,home:'Yakult Swallows',away:'Samsung Lions'},
-  {round:13,home:'KT wiz',away:'Samsung Lions'},{round:13,home:'Hyundai Unicorns',away:'Yakult Swallows'},{round:14,home:'Samsung Lions',away:'Hyundai Unicorns'},{round:14,home:'Yakult Swallows',away:'KT wiz'},
-  {round:15,home:'Hyundai Unicorns',away:'KT wiz'},{round:15,home:'Samsung Lions',away:'Yakult Swallows'},{round:16,home:'Samsung Lions',away:'KT wiz'},{round:16,home:'Yakult Swallows',away:'Hyundai Unicorns'},
-  {round:17,home:'Hyundai Unicorns',away:'Samsung Lions'},{round:17,home:'KT wiz',away:'Yakult Swallows'},{round:18,home:'KT wiz',away:'Hyundai Unicorns'},{round:18,home:'Yakult Swallows',away:'Samsung Lions'},
-  {round:19,home:'Samsung Lions',away:'KT wiz'},{round:19,home:'Yakult Swallows',away:'Hyundai Unicorns'},{round:20,home:'Hyundai Unicorns',away:'Samsung Lions'},{round:20,home:'KT wiz',away:'Yakult Swallows'},
-  {round:21,home:'KT wiz',away:'Hyundai Unicorns'},{round:21,home:'Yakult Swallows',away:'Samsung Lions'},{round:22,home:'KT wiz',away:'Samsung Lions'},{round:22,home:'Hyundai Unicorns',away:'Yakult Swallows'},
-  {round:23,home:'Samsung Lions',away:'Hyundai Unicorns'},{round:23,home:'Yakult Swallows',away:'KT wiz'},{round:24,home:'Hyundai Unicorns',away:'KT wiz'},{round:24,home:'Samsung Lions',away:'Yakult Swallows'}
-];
 const teams=[{name:'Hyundai Unicorns',city:'HCBB',logo:'hyundai'},{name:'KT wiz',city:'HCBB',logo:'kt'},{name:'Samsung Lions',city:'HCBB',logo:'samsung'},{name:'Yakult Swallows',city:'HCBB',logo:'yakult'}];
 const rosters={};
 function renderStandings(){const body=document.querySelector('#standings-body');if(!body)return;body.innerHTML=standings.map((x,i)=>{const pct=x.g?(x.w/x.g).toFixed(3).replace('0',''):'-';return `<tr><td class="rank">${i+1}</td><td class="team-name">${x.team}</td><td>${x.g}</td><td>${x.w}</td><td>${x.l}</td><td>${pct}</td></tr>`}).join('')}
-function getKoreaDate(){return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date())}
-function renderSchedule(){const list=document.querySelector('#schedule-list');if(!list)return;const today=getKoreaDate();const notices=Array.isArray(window.kfbScheduleNotices)?window.kfbScheduleNotices.filter(n=>n.date===today).sort((a,b)=>(a.time||'').localeCompare(b.time||'')):[];if(notices.length){list.innerHTML=`<div class="schedule-round"><h3>오늘의 경기 · ${today}</h3>${notices.map(n=>`<article class="match"><div class="match-teams"><span>${n.match||'경기'}</span></div><div class="match-status">${n.time||'경기 예정'}</div><p class="schedule-notice">${n.content||''}</p></article>`).join('')}</div>`}else{list.innerHTML=`<div class="schedule-round"><h3>오늘의 경기 · ${today}</h3><div class="match"><div class="match-teams"><span>오늘 등록된 경기 공지가 없습니다.</span></div><div class="match-status">NO NOTICE</div></div></div>`}}
 function renderTeams(){const root=document.querySelector('#teams-grid');if(!root)return;root.innerHTML=teams.map(t=>{const logo=t.logo==='yakult'?`<img class="team-logo-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tokyo%20Yakult%20Swallows%20insignia.svg" alt="${t.name} logo">`:`<div class="team-logo team-logo-${t.logo}" aria-label="${t.name} logo"></div>`;return `<article class="team-card">${logo}<h3>${t.name}</h3><p>${t.city}</p></article>`}).join('')}
 function renderRosters(){const root=document.querySelector('#rosters-grid');if(!root)return;root.innerHTML='<p>Roster data loaded from KFB League roster records.</p>'}
 function fmt(n){return Number(n||0).toLocaleString('en-US')}
@@ -32,4 +16,4 @@ function renderPlayers(query=''){const root=document.querySelector('#player-resu
 function initPlayerSearch(){const input=document.querySelector('#player-search-input');const clear=document.querySelector('#player-search-clear');if(!input)return;input.addEventListener('input',e=>renderPlayers(e.target.value));clear.addEventListener('click',()=>{input.value='';renderPlayers('');input.focus()});renderPlayers('')}
 const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');if(toggle){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open)});document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')))}
 document.querySelector('#year').textContent=new Date().getFullYear();
-renderStandings();renderSchedule();renderTeams();renderRosters();initPlayerSearch();
+renderStandings();renderTeams();renderRosters();initPlayerSearch();
